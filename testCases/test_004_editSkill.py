@@ -27,61 +27,61 @@ class Test_004_EditSkill:
     logger = LogGen.loggen()
 
 
-    # @pytest.mark.sanity
-    # def test_editSkillNegative(self, setup):
-    #         # Negative Test
-    #         self.logger.info("********** Test_004_EditSkill Negative Test **********")
-    #         self.driver = setup
-    #         self.driver.get(self.BaseURL)
-    #         self.driver.maximize_window()
-    #         self.l = Login(self.driver)
-    #         self.p = profile(self.driver)
-    #         self.l.clicksignin()
-    #         time.sleep(1)
-    #         self.l.setUserName(self.username)
-    #         time.sleep(1)
-    #         self.l.setPassword(self.password)
-    #         time.sleep(1)
-    #         self.l.clickLogin()
-    #         time.sleep(1)
-    #         self.p.clickProfileicon()
-    #         time.sleep(1)
-    #         self.p.clickProfilepage()
-    #         time.sleep(3)
-    #         # self.p.scrollExpertise()
-    #         self.p.scrollAbout()
-    #         time.sleep(3)
-    #         self.p.clickExpertise()
-    #         time.sleep(3)
-    #         self.p.clickaddskill()
-    #         time.sleep(2)
-    #         self.p.clickSubmit()
-    #
-    #         time.sleep(2)
-    #         # toast_msg = self.driver.find_elements(By.XPATH,"/html/body/div[1]/div[1]/div/div/div[1]/div[2]")
-    #         # result = toast_msg[0].text
-    #         # print(result)
-    #
-    #         error_msg1 = self.driver.find_elements(By.XPATH, "/html/body/div[3]/div[3]/main/section/div[2]/form/div[2]/div[1]/div")
-    #         result = error_msg1[0].text
-    #         if result == "Skill Name is required":
-    #             self.logger.info("Error Message Is: %s", result)
-    #         else:
-    #             assert False
-    #             self.logger.info("***************  Skill Name is required Failed   *************")
-    #
-    #
-    #         error_msg2 = self.driver.find_elements(By.XPATH,"/html/body/div[3]/div[3]/main/section/div[2]/form/div[2]/div[2]/p")
-    #         result = error_msg2[0].text
-    #         if result == "Skill Level is required":
-    #             self.logger.info("Error Message Is: %s", result)
-    #         else:
-    #             assert False
-    #             self.logger.info("***************  Skill Level is required Failed   *************")
-    #
-    #
-    #         self.driver.close()
-    #         self.logger.info("********** Ending Edit Skill Negative Test *********")
+    @pytest.mark.sanity
+    def test_editSkillNegative(self, setup):
+            # Negative Test
+            self.logger.info("********** Test_004_EditSkill Negative Test **********")
+            self.driver = setup
+            self.driver.get(self.BaseURL)
+            self.driver.maximize_window()
+            self.l = Login(self.driver)
+            self.p = profile(self.driver)
+            self.l.clicksignin()
+            time.sleep(1)
+            self.l.setUserName(self.username)
+            time.sleep(1)
+            self.l.setPassword(self.password)
+            time.sleep(1)
+            self.l.clickLogin()
+            time.sleep(1)
+            self.p.clickProfileicon()
+            time.sleep(1)
+            self.p.clickProfilepage()
+            time.sleep(3)
+            # self.p.scrollExpertise()
+            self.p.scrollAbout()
+            time.sleep(3)
+            self.p.clickExpertise()
+            time.sleep(3)
+            self.p.clickaddskill()
+            time.sleep(2)
+            self.p.clickSubmit()
+    
+            time.sleep(2)
+            # toast_msg = self.driver.find_elements(By.XPATH,"/html/body/div[1]/div[1]/div/div/div[1]/div[2]")
+            # result = toast_msg[0].text
+            # print(result)
+    
+            error_msg1 = self.driver.find_elements(By.XPATH, "/html/body/div[3]/div[3]/main/section/div[2]/form/div[2]/div[1]/div")
+            result = error_msg1[0].text
+            if result == "Skill Name is required":
+                self.logger.info("Error Message Is: %s", result)
+            else:
+                assert False
+                self.logger.info("***************  Skill Name is required Failed   *************")
+    
+    
+            error_msg2 = self.driver.find_elements(By.XPATH,"/html/body/div[3]/div[3]/main/section/div[2]/form/div[2]/div[2]/p")
+            result = error_msg2[0].text
+            if result == "Skill Level is required":
+                self.logger.info("Error Message Is: %s", result)
+            else:
+                assert False
+                self.logger.info("***************  Skill Level is required Failed   *************")
+    
+    
+            self.driver.close()
+            self.logger.info("********** Ending Edit Skill Negative Test *********")
 
 
     @pytest.mark.sanity
