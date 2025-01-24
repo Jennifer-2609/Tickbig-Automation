@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 
 from pageObjects.LoginPage import Login
 from pageObjects.applyproject import applyproject
-from utilities.readProperties import ReadConfig
-from utilities.customLogger import LogGen
+from pageObjects.readProperties import ReadConfig
+from pageObjects.customLogger import LogGen
 import configparser
 
 config=configparser.ConfigParser()
