@@ -44,7 +44,7 @@ class Test_000_Login:
 
         error_msg8 = self.driver.find_elements(By.XPATH, "/html/body/div[1]/div[1]/div/div/div[1]/div[2]")
         result = error_msg8[0].text
-        if result == "Logged In successfully":
+        if result == "Logged In successfully.":
             self.logger.info("Error Message Is: %s", result)
         else:
             assert False
